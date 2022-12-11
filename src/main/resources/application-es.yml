@@ -1,0 +1,10 @@
+#spring:
+#  data:
+#    elasticsearch:
+#      cluster-name: Elasticsearch-2207261532917
+#      cluster-nodes: 10.20.32.117:9400
+spring:
+  elasticsearch:
+    uris: 10.20.32.117:9400
+    username: elastic
+    password: hundsun@123
