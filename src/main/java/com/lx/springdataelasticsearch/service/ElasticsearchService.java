@@ -7,4 +7,10 @@ package com.lx.springdataelasticsearch.service;
 public interface ElasticsearchService {
 
     void createIndex();
+
+    Boolean existsIndex(String indexName);
+
+    void saveDocument();
+
+    void batchSaveDocument();
 }

@@ -1,0 +1,6 @@
+spring:
+  redis:
+    host: 10.20.35.85
+    port: 6379
+    database: 7
+    password: dmpIwin@123

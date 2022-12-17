@@ -9,5 +9,5 @@ import org.apache.ibatis.annotations.Mapper;
  * @Date 2022/12/10 21:39
  */
 @Mapper
-public interface CollectConfMapper extends BaseMapper<Tag> {
+public interface TagMapper extends BaseMapper<Tag> {
 }

@@ -7,9 +7,9 @@ mybatis-plus:
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3321/Spring-Data-Elasticsearch?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=UTF-8
+    url: jdbc:mysql://10.20.35.85:33061/sx_dmp_jres?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=UTF-8
     username: root
-    password: 123456
+    password: dmpIwin@123
 logging:
   level:
     com:

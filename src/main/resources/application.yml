@@ -9,3 +9,14 @@ spring:
     include:
       - db
       - es
+      - redis
+
+total:
+  count: 10000
+page:
+  size: 10
+
+thread:
+  num:
+    getOneDocument: 10
+    esInsert: 10

@@ -6,5 +6,5 @@ package com.lx.springdataelasticsearch.service;
  */
 public interface CreateDataService {
 
-    void selectAll();
+    void createData() throws Exception;
 }

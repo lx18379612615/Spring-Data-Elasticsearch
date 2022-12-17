@@ -1,16 +1,18 @@
 package com.lx.springdataelasticsearch.service;
 
+import com.lx.springdataelasticsearch.entity.Tag;
+
 /**
  * @Author lengxu32110
  * @Date 2022/12/11 21:07
  */
 public interface GetValueService {
 
-    String getStringValue();
+    String getStringValue(Tag tag);
 
-    Integer getIntegerValue();
+    Long getLongValue(Tag tag);
 
-    Long getLongValue();
+    Double getDoubleValue(Tag tag);
 
-    Double getDoubleValue();
+    String getIdValue(Tag tag);
 }

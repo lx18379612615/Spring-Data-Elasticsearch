@@ -8,3 +8,6 @@ spring:
     uris: 10.20.32.117:9400
     username: elastic
     password: hundsun@123
+
+index:
+  name: group_tag_all_lx_1217
