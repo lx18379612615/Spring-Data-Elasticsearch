@@ -19,5 +19,9 @@ public class Constants {
 
     public static final String FUND_ACCOUNT_EN = "fund_account";
 
+    public static final String PHONE_EN = "phone";
+
     public static final String CLIENT_NAME_EN = "client_name";
+
+    public static final String NME_EN = "nme";
 }

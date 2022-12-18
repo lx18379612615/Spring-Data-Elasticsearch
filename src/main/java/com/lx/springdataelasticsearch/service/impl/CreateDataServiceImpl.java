@@ -64,6 +64,9 @@ public class CreateDataServiceImpl implements CreateDataService {
     @Value("${thread.num.esInsert}")
     Integer threadNumEsInsert;
 
+    @Value("${union.english.name}")
+    String unionEnglishName;
+
     private final Map<String, Function<Tag, Object>> mapFunction = new HashMap<>();
 
     public static List<Dictionary> dictionaryList = new ArrayList<>();
@@ -81,6 +84,7 @@ public class CreateDataServiceImpl implements CreateDataService {
         log.info("indexName: {}", indexName);
         log.info("threadNumGetOneDocument: {}", threadNumGetOneDocument);
         log.info("threadNumEsInsert: {}", threadNumEsInsert);
+        log.info("unionEnglishName: {}", unionEnglishName);
     }
 
     @Override
@@ -97,7 +101,7 @@ public class CreateDataServiceImpl implements CreateDataService {
             for (int j = 0; j < pageSize; j++) {
                 executorService.execute(() -> {
                     Map<String, Object> oneDocument = getOneDocument(tags);
-                    IndexQuery indexQuery = new IndexQueryBuilder().withId(oneDocument.get(Constants.CLIENT_ID_EN).toString())
+                    IndexQuery indexQuery = new IndexQueryBuilder().withId(oneDocument.get(unionEnglishName).toString())
                             .withObject(oneDocument)
                             .build();
                     indexQueryList.add(indexQuery);

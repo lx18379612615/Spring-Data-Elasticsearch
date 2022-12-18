@@ -32,9 +32,11 @@ public class GetValueServiceImpl implements GetValueService {
         switch (englishName) {
             case CLIENT_ID_EN:
             case FUND_ACCOUNT_EN:
+            case PHONE_EN:
                 value = String.valueOf(Long.parseLong(Objects.requireNonNull(stringRedisTemplate.opsForValue().get(UNION_ID_INCREMENT))) + UNION_ID_PREFIX);
                 break;
             case CLIENT_NAME_EN:
+            case NME_EN:
                 value = UNION_NAME_PREFIX + (Long.parseLong(Objects.requireNonNull(stringRedisTemplate.opsForValue().get(UNION_ID_INCREMENT))) + UNION_ID_PREFIX);
                 break;
             default:

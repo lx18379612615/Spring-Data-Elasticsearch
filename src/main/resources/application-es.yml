@@ -1,8 +1,3 @@
-#spring:
-#  data:
-#    elasticsearch:
-#      cluster-name: Elasticsearch-2207261532917
-#      cluster-nodes: 10.20.32.117:9400
 spring:
   elasticsearch:
     uris: 10.20.32.117:9400
@@ -10,4 +5,8 @@ spring:
     password: hundsun@123
 
 index:
-  name: group_tag_all_lx_1217
+  name: group_tag_all_nesc_1217
+
+union:
+  english:
+    name: phone
