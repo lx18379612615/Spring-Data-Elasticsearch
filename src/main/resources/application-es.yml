@@ -1,12 +1,18 @@
+#spring:
+#  elasticsearch:
+#    uris: 10.20.32.117:9400
+#    username: elastic
+#    password: hundsun@123
+
 spring:
   elasticsearch:
-    uris: 10.20.32.117:9400
+    uris: 10.20.34.77:9400
     username: elastic
     password: hundsun@123
 
 index:
-  name: group_tag_all_nesc_1217
+  name: group_tag_all_boci_1230
 
 union:
   english:
-    name: phone
+    name: client_id

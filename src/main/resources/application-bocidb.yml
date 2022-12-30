@@ -1,0 +1,19 @@
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #开启sql日志
+    map-underscore-to-camel-case: true
+    # 该配置就是将带有下划线的表字段映射为驼峰格式的实体类属性
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://10.20.34.75:33061/hs_dmp_jres?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: r#dcenter9
+logging:
+  level:
+    com:
+      baomidou:
+        mybatisplus: INFO
+      lx:
+        springdataelasticsearch: INFO

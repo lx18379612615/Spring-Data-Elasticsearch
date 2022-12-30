@@ -8,6 +8,7 @@ import com.lx.springdataelasticsearch.entity.Tag;
 import com.lx.springdataelasticsearch.service.CreateDataService;
 import com.lx.springdataelasticsearch.service.GetValueService;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.elasticsearch.core.ElasticsearchRestTemplate;
 import org.springframework.data.elasticsearch.core.mapping.IndexCoordinates;
@@ -25,6 +26,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
 /**
  * @Author lengxu32110
@@ -90,7 +92,10 @@ public class CreateDataServiceImpl implements CreateDataService {
     @Override
     @Async
     public void createData() throws Exception {
-        List<Tag> tags = tagMapper.selectList(null);
+        List<Tag> tags = tagMapper.selectList(null)
+                .stream()
+                .filter(tag -> StringUtils.isNotEmpty(tag.getCTagEnglishName()))
+                .collect(Collectors.toList());
 
         int perSize = totalCount / pageSize;
         ExecutorService esInsertExecutor = Executors.newFixedThreadPool(threadNumEsInsert);
